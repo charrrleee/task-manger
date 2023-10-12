@@ -1,0 +1,6 @@
+type Task = {
+    id: number
+    title: string
+    dueDate: Date
+    category: string
+}
