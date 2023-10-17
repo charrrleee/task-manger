@@ -2,10 +2,9 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { useState } from "react";
 import categories from "../categories";
 import * as Yup from 'yup';
-import utils from "../utils";
 import moment from "moment";
 
-interface TaskForm {
+interface TaskFormProps {
     addTask: (task: Task) => void;
 }
 
@@ -16,7 +15,7 @@ const validationSchema = Yup.object().shape({
   category: Yup.string().required('Category is required'),
 });
 
-const TaskForm: React.FC = (props: TaskForm) => {
+const TaskForm: React.FC<TaskFormProps> = (props: TaskFormProps) => {
     const [_, setTask] = useState<Task>();
 
     return (
