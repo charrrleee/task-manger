@@ -1,7 +1,7 @@
 import utils from "../utils";
 
 interface TaskListProps {
-    tasks: Tasks[];
+    tasks: Task[];
     deleteTask: (id: number) => void;
 }
 
